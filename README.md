@@ -1,6 +1,5 @@
-# what does it do
+# xslt transforms as a web service
 
-Runs xslt transforms.
 If you can get by with xslt 1.0, xsltproc is much faster for rapid prototyping.
 
 Saxon-HE is the only open source xslt 2.0 (and 3.0!) processor.
