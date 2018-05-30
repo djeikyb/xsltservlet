@@ -19,14 +19,14 @@ This was thrown together with great speed and only just enough care.
 When you need to build the jar:
 
     docker build -t xsltservlet:dev dev/
-	docker run --rm -it -v "$PWD:/app" xsltservlet:dev
-	mvn package
+    docker run --rm -it -v "$PWD:/app" xsltservlet:dev
+    mvn package
 
 Once you have the jar:
 
-	cp target/saxonheservlet-0.1.0.jar run/
-	docker build -t xsltservlet run/
-	docker run --rm -p "8090:8080" -v "<MYWORKDIR>:/app" xsltservlet
+    cp target/saxonheservlet-0.1.0.jar run/
+    docker build -t xsltservlet run/
+    docker run --rm -p "8090:8080" -v "<MYWORKDIR>:/app" xsltservlet
 
 # license
 
