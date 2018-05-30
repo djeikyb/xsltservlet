@@ -18,7 +18,7 @@ This was thrown together with great speed and only just enough care.
 
 When you need to build the jar:
 
-    docker run --rm -d -it -v "$PWD:/app" -w /app maven:3.5.3-jdk-8-alpine mvn package
+    docker run --rm -v "$PWD:/app" -w /app maven:3.5.3-jdk-8-alpine mvn package
 
 Once you have the jar:
 
