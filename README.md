@@ -10,7 +10,7 @@ On my machine, transform time was 3x better compared to the cli.
 Run a transform with your [favourite][httpie] http client.
 Note the url query params, especially the cache busting:
 
-    http --ignore-stdin --print b ':8090?style=/app/mytransform.xslt&source=/app/mydoc.xml&clear-stylesheet-cache=yes' | tee output.txt
+    http --print b ':8090?style=/app/mytransform.xslt&source=/app/mydoc.xml&clear-stylesheet-cache=yes' | tee output.txt
 
 This was thrown together with great speed and only just enough care.
 
