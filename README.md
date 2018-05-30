@@ -14,23 +14,19 @@ Note the url query params, especially the cache busting:
 
 This was thrown together with great speed and only just enough care.
 
-# build and run the service
+## build and run the service
 
 When you need to build the jar:
 
-    docker build -t xsltservlet:dev dev/
-    docker run --rm -it -v "$PWD:/app" xsltservlet:dev
-    mvn package
+    docker run --rm -d -it -v "$PWD:/app" -w /app maven:3.5.3-jdk-8-alpine mvn package
 
 Once you have the jar:
 
-    cp target/saxonheservlet-0.1.0.jar run/
-    docker build -t xsltservlet run/
+    docker build -t xsltservlet .
     docker run --rm -p "8090:8080" -v "<MYWORKDIR>:/app" xsltservlet
 
-# license
+## license
 
-This repo distributes Saxon-HE 9.8.
 [Saxon-HE is open source][license] under [MPL 2.0][mpl], and is itself composed of several open source components.
 What little here that isn't covered by another license is under the [BSD 3-clause][bsd3]
 
